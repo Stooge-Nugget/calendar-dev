@@ -1,8 +1,16 @@
-<div class="container" appRowSelection (rowSelectionChange)="updateRows($event)">
-  <div *ngFor="let row of rows; let i = index">
-    <div class="row" [attr.row-number]="i" [style.background-color]="row.selected ? 'blue': 'white'"></div>
+<a (click)="addEventSelected()">Add Event</a>
+<div class="container">
+  <div class="row-container" appRowSelection (rowSelectionChange)="updateRows($event)">
+    <div *ngFor="let row of rows; let i = index">
+      <div class="row" [attr.row-number]="i" [style.background-color]="row.selected ? 'blue': 'transparent'"></div>
+    </div>
+  </div>
+
+  <div class="row-content-container">
+    <div *ngFor="let test of events" class="row-content" [style.top]="test.position" [style.height]="test.height">
+      {{test.eventName}} : {{test.height}}
+    </div>
   </div>
 </div>
-
 
 <router-outlet></router-outlet>
