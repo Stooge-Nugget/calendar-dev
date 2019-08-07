@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { RowSelectionDirective } from './directives/row-selection/row-selection.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RowSelectionDirective
   ],
   imports: [
     BrowserModule,
