@@ -1,17 +1,30 @@
-<!-- <a (click)="addEventSelected()">Add Event</a>
-<div class="container">
-  <div class="row-container" appRowSelection (rowSelectionChange)="updateRows($event)">
-    <div *ngFor="let row of rows; let i = index">
-      <div class="row" [attr.row-number]="i" [style.background-color]="row.selected ? 'blue': 'transparent'"></div>
-    </div>
+<div class="header">
+  <div class="prev-next">
+    <button class="arrow-button left-arrow ">
+      <i class="material-icons md-18">
+        keyboard_arrow_left
+      </i>
+    </button>
+    <button class="arrow-button right-arrow ">
+      <i class="material-icons md-18">
+        keyboard_arrow_right
+      </i>
+    </button>
   </div>
-
-  <div class="row-content-container">
-    <div *ngFor="let test of events" class="row-content" [style.top]="test.position" [style.height]="test.height">
-      {{test.eventName}} : {{test.height}}
-    </div>
+  <div class="mode-select">
+    <div class="mode">Day</div>
+    <div class="vert-divide"></div>
+    <div class="mode">Week</div>
+    <div class="vert-divide"></div>
+    <div class="mode-selected">Month</div>
   </div>
-</div> -->
+  <div class="add-event">
+    <i class="material-icons md-18">
+      add
+    </i>
+    <span>Add Event</span>
+  </div>
+</div>
 
 <div class="centre">
   <div class="event-day">
@@ -27,5 +40,21 @@
   </div>
 </div>
 
+<div class="hour-rows">
+  <span>12am</span><div class="dotted-line"></div>
+</div>
 
-<router-outlet></router-outlet>
+<!-- <a (click)="addEventSelected()">Add Event</a>
+<div class="container">
+  <div class="row-container" appRowSelection (rowSelectionChange)="updateRows($event)">
+    <div *ngFor="let row of rows; let i = index">
+      <div class="row" [attr.row-number]="i" [style.background-color]="row.selected ? 'blue': 'transparent'"></div>
+    </div>
+  </div>
+
+  <div class="row-content-container">
+    <div *ngFor="let test of events" class="row-content" [style.top]="test.position" [style.height]="test.height">
+      {{test.eventName}} : {{test.height}}
+    </div>
+  </div>
+</div> -->
