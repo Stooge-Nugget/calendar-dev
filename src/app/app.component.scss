@@ -15,28 +15,28 @@
   padding: 50px;
   width: 100%;
   height: 100%;
-//   z-index: 1;
+  //   z-index: 1;
 }
 
 .row-content-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 50px 50px 0px 50px;
-    height: 0;
-    // width: 100%;
-    // height: 100%;
-    // z-index: 0;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 50px 50px 0px 50px;
+  height: 0;
+  // width: 100%;
+  // height: 100%;
+  // z-index: 0;
+}
 
 .row {
   height: 50px;
   width: 100%;
   border: 1px solid lightgray;
   box-sizing: border-box;
-//   z-index: 2;
+  //   z-index: 2;
 }
 
 .row-content {
@@ -46,10 +46,88 @@
   background-color: plum;
   position: relative;
   box-sizing: border-box;
-//   z-index: 3;
+  //   z-index: 3;
 }
 
 a {
-    text-decoration: underline;
-    cursor: pointer;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.centre {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+
+.event-day,
+.event-week,
+.event-month {
+  padding: 10px;
+  border-radius: 0.2em;
+  font-size: 10pt;
+  animation: 0.5s ease-out 0s 1 eventLoad;
+
+  .event-name {
+    font-weight: 500;
+  }
+
+  p {
+    font-weight: 300;
+  }
+}
+
+.event-day {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;
+  height: 30px;
+  background-color: #ddd4f8;
+  border-left: 3px solid #8465eb;
+  color: #8465eb;
+}
+
+@keyframes eventLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.event-week {
+  width: 100px;
+  height: 70px;
+  background-color: #ddd4f8;
+  border-left: 3px solid #8465eb;
+  color: #8465eb;
+}
+
+.event-month {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100px;
+  height: 25px;
+  background-image: linear-gradient(to right, #8465eb, #a088f0);
+  color: white;
+}
+
+@keyframes eventLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }

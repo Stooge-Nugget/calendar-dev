@@ -1,4 +1,4 @@
-<a (click)="addEventSelected()">Add Event</a>
+<!-- <a (click)="addEventSelected()">Add Event</a>
 <div class="container">
   <div class="row-container" appRowSelection (rowSelectionChange)="updateRows($event)">
     <div *ngFor="let row of rows; let i = index">
@@ -11,6 +11,21 @@
       {{test.eventName}} : {{test.height}}
     </div>
   </div>
+</div> -->
+
+<div class="centre">
+  <div class="event-day">
+    <span class="event-name">Need Donuts</span>
+    <span class="event-name">1:00 - 1:30 am</span>
+  </div>
+  <div class="event-week">
+    <span class="event-name">Need Donuts</span>
+    <p class="event-desc">Donut supply running low!</p>
+  </div>
+  <div class="event-month">
+    <span class="event-name">Need Donuts</span>
+  </div>
 </div>
+
 
 <router-outlet></router-outlet>
